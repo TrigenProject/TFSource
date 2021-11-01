@@ -1,0 +1,9 @@
+TFSource Task :
+
+1)	Create responsive page
+2)	Create Product Notification Center Section
+3)	New Product Notification accordion
+4)	Functionality Required
+5)	Toggle switch ON /OFF
+6)	Expand /Collapse
+
