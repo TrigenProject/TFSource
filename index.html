@@ -189,7 +189,7 @@
 					<!-- Search Bar end-->
 				</div>
 			</div>
-			<div class="col-2">
+			<div class="col-2" style="margin-left: -4%;">
 				<span class="number">0</span>
 				<img src="img/group-1227.svg" class="Group-1227">
 			</div>
@@ -236,35 +236,28 @@
 		  		</div>
 		  		<div class="col-md-12">
 		  			<!-- Tittle Text -->
-		  			<div class="New-Preorder-Notifications">New Preorder Notifications</div>
-					<div class="border-bold"></div>
-					<div class="row">
-						<!-- New Preorder Image -->
-						<div class="col-md-10 col-sm-10 col-xs-10">
-							<img src="img/image-1.jpg" srcset="img/image-1@2x.jpg 2x,img/image-1@3x.jpg 3x" class="Image-1 ">
+		  			<div class="container">
+						 <div class="New-Preorder-Notifications">New Preorder Notifications</div>
+						<div class="border-bold"></div>
+						<button class="accordion"><img src="img/image-1.jpg" srcset="img/image-1@2x.jpg 2x,img/image-1@3x.jpg 3x" class="Image-1 "></button>
+						<div class="panel">
+						    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+						      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+						      ea commodo consequat.</p>
 						</div>
-						<div class="col-md-2 col-sm-2 col-xs-2 pd-3">
-							<center><i class="fa fa-chevron-down" aria-hidden="true"></i></center>
+						<div class="border-bold"></div>
+						<button class="accordion"><img src="img/image-2.jpg" srcset="img/image-2@2x.jpg 2x,img/image-2@3x.jpg 3x" class="Image-1 "></button>
+						<div class="panel">
+						    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+						      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+						      ea commodo consequat.</p>
 						</div>
-					</div>
-					<div class="border-bold"></div>
-					<div class="row">
-						<!-- New Preorder Image -->
-						<div class="col-md-10">
-							<img src="img/image-2.jpg" srcset="img/image-2@2x.jpg 2x,img/image-2@3x.jpg 3x" class="Image-1 ">
-						</div>
-						<div class="col-md-2 pd-3">
-							<center><i class="fa fa-chevron-down" aria-hidden="true"></i></center>
-						</div>
-					</div>
-					<div class="border-bold"></div>
-					<div class="row">
-						<div class="col-md-10">
-							<!-- New Preorder Image -->
-							<img src="img/image-3.jpg" srcset="img/image-3@2x.jpg 2x,img/image-3@3x.jpg 3x" class="Image-1 ">
-						</div>
-						<div class="col-md-2 pd-3">
-							<center><i class="fa fa-chevron-down" aria-hidden="true"></i></center>
+						<div class="border-bold"></div>
+						<button class="accordion"><img src="img/image-2.jpg" srcset="img/image-2@2x.jpg 2x,img/image-2@3x.jpg 3x" class="Image-1 "></button>
+						<div class="panel">
+						    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+						      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+						      ea commodo consequat.</p>
 						</div>
 					</div>
 					<div class="border-bold"></div>
@@ -370,4 +363,20 @@
 		</div>
 	</div>
 </body>
+<!--accordions JS-->
+<script type="text/javascript">
+	var accordions = document.querySelectorAll(".accordion");
+	accordions.forEach((acc) =>
+	  acc.addEventListener("click", () => {
+	    acc.classList.toggle("active");
+	    var panel = acc.nextElementSibling;
+	    panel.classList.toggle("activeP");
+	    if (panel.style.maxHeight) {
+	      panel.style.maxHeight = null;
+	    } else {
+	      panel.style.maxHeight = panel.scrollHeight + "px";
+	    }
+	  })
+	);
+</script>
 </html>
